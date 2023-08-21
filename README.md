@@ -24,7 +24,7 @@
     17. Sergey Brin
     18. Steve Ballmer
     19. Warren Buffett
-    19. Zhong Shanshan
+    20. Zhong Shanshan
 
 #### Folder structure:
 
