@@ -1,4 +1,4 @@
-# Billionaires_Image-Classification
+# Billionaires_Image Classification
 
 ![Screenshot UI](https://github.com/Michs224/Billionaires_Image-Classification/assets/128117104/4dfac9f4-8c78-4d81-92e3-30b7e8ecab73)
 
