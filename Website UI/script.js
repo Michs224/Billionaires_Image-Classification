@@ -18,7 +18,7 @@ function init() {
     dz.on("complete", function (file) {
         let imageData = file.dataURL;
         
-        var url = "http://127.0.0.1:5000/Classify_image"; //Use this if you are NOT using nginx.
+        var url = "http://127.0.0.1:8080/Classify_image"; //Use this if you are NOT using nginx.
         // var url="/api/Classify_image"; // Use this if  you are using nginx.
 
         $.post(url, {
