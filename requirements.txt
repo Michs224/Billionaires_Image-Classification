@@ -1,0 +1,7 @@
+flask
+joblib
+opencv-python
+opencv-contrib-python-headless
+numpy
+scikit-learn
+PyWavelets
