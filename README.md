@@ -41,3 +41,5 @@
     5. Jupyter notebook, visual studio code and pycharm as IDE
     6. Python flask for http server
     7. HTML/CSS/Javascript for UI
+
+##### Deploy on AWS EC2 : http://ec2-13-53-132-230.eu-north-1.compute.amazonaws.com:5000/
