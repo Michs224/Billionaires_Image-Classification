@@ -18,8 +18,8 @@ function init() {
     dz.on("complete", function (file) {
         let imageData = file.dataURL;
         
-        var url = "http://127.0.0.1:8080/Classify_image"; //Use this if you are NOT using nginx.
-        // var url="/api/Classify_image"; // Use this if  you are using nginx.
+        var url = "http://127.0.0.1:5000/Classify_image"; // Use this if you are NOT using nginx.
+        // var url="http://ec2-13-53-132-230.eu-north-1.compute.amazonaws.com:5000/Classify_image"; // Deploy on AWS EC2.
 
         $.post(url, {
             image_data: imageData
@@ -59,7 +59,6 @@ function init() {
                 $("#error").show();
                 return;
             }
-            // let players = ["lionel_messi", "maria_sharapova", "roger_federer", "serena_williams", "virat_kohli"];
             
             let match = [];
             let bestScore = -1;
