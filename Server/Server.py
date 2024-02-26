@@ -3,7 +3,6 @@ import Util
 
 app=Flask(__name__)
 
-
 @app.route("/Classify_image", methods=["GET","POST"])
 
 def Classify_image():
