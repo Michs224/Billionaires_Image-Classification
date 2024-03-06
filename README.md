@@ -29,7 +29,7 @@
 #### Folder structure:
 
   - Model: Python notebook for model building and image data set
-  - Server: Python flask server
+  - Server: Python flask server (Run Server.py, after that you can run the UI through its html file, which is Billionaires.html)
   - Website UI : UI Website code
 
 #### Technologies used in this project,
@@ -43,3 +43,5 @@
     7. HTML/CSS/Javascript for UI
 
 ##### Deployed on AWS EC2 : http://ec2-13-53-132-230.eu-north-1.compute.amazonaws.com:5000/
+
+_**I deployed to AWS, but when I deployed, I used an aws free tier account which now the free tier duration will expire which was originally for 1 year. So, if the link is not working, then you can just run it on your localhost.I deployed to AWS, but when I deployed, I used an aws free tier account which now the free tier duration will expire which was originally for 1 year. So, if the link is not working, then you can just run it on your localhost.**_
