@@ -20,10 +20,11 @@ function init() {
         
         var url = "http://127.0.0.1:5000/Classify_image"; // Use this if you are NOT using nginx.
         // var url="http://ec2-13-53-132-230.eu-north-1.compute.amazonaws.com:5000/Classify_image"; // Deploy on AWS EC2.
-
+   
         $.post(url, {
             image_data: imageData
-        },function(data, status) {
+        },function(data,status) {
+            console.log(status);
             /* 
             Below is a sample response if you have two faces in an image lets say virat and roger together.
             Most of the time if there is one person in the image you will get only one element in below array
@@ -74,21 +75,23 @@ function init() {
             if (match) {
                 $("#error").hide();
                 $("#resultHolder").show();
-                // $("#divClassTable").show();
+                $("#divClassTable").show();
 
                 let imagesHtml = '';
-                for (let i = 0; i < match.length; i++) {
-                    imagesHtml += $(`[data-player="${match[i].class}"`).html();
-                }
-                $("#resultHolder").html(imagesHtml);
-
-                // let classDictionary = match.class_dictionary;
-                // for(let personName in classDictionary) {
-                //     let index = classDictionary[personName];
-                //     let probabilityScore = match.class_probability[index];
-                //     let elementName = "#Score_" + personName;
-                //     $(elementName).html(probabilityScore);
+                // for (let i = 0; i < match.length; i++) {
+                //     imagesHtml += $(`[data-player="${match[i].class}"]`).html();
                 // }
+                imagesHtml = $(`[data-player="${match[0].class}"]`).html();
+                $("#resultHolder").html(imagesHtml);
+   
+                let classDictionary = match[0].class_dictionary;
+                for(let personName in classDictionary) {
+                    let index = classDictionary[personName];
+                    let probabilityScore = match[0].class_probability[index];
+                    let elementName = "#Score_" + personName.replace(/\s+/g, '');
+                    console.log(elementName);
+                    $(elementName).html(probabilityScore);
+                }    
 
             }
             // dz.removeFile(file);            

@@ -14,8 +14,8 @@ __model = None
 def classify_image(image_base64_data,file_path=None):
     images=get_cropped_image_if_2_eyes(file_path,image_base64_data)
 
-    result=[]
-
+    # result=[]
+    
     for img in images:
         scalled_raw_img = cv2.resize(img, (48, 48))
         img_har = waveletTrans(scalled_raw_img, "db1", 5)
@@ -28,11 +28,22 @@ def classify_image(image_base64_data,file_path=None):
 
         # result.append(class_number_to_name(__model.predict(final)[0]))
 
-        result.append({
+        ''' Buat ngecek hasil prediksi
+        print(__model.predict(final))
+        print(__model.predict(final)[0])
+        '''
+        result=[{
             "class":class_number_to_name(__model.predict(final)[0]),
             "class_probability":np.round(__model.predict_proba(final)*100,2).tolist()[0],
             "class_dictionary":__class_name_to_number
-        })
+        }]
+        # result.append({
+        #     "class":class_number_to_name(__model.predict(final)[0]),
+        #     "class_probability":np.round(__model.predict_proba(final)*100,2).tolist()[0],
+        #     "class_dictionary":__class_name_to_number
+        # })
+
+        # print(result[0]["class"])
         # __model.predict_proba(final)
     return result
 
@@ -98,7 +109,8 @@ if __name__=="__main__":
     load_saved_artifacts()
     # print(classify_image(getBase64_testImage_for_jackMa(), None))
     # print(classify_image(None,"./test_image/Image_1.jpg"))
-    print(classify_image(None, os.path.dirname(os.path.abspath(__file__))+"/test_image/Image_2.jpg"))
+    print(os.path.dirname(os.path.abspath(__file__))+"\\test_image\\test.jpg")
+    print(classify_image(None, "D:\GitHub\Billionaires_Image-Classification\Website UI\\test_image\\test.jpg"))
     # print(classify_image(None, "./test_image/Image_3.jpg"))
     # print(classify_image(None, "./test_image/Image_21.jpg"))
     # print(classify_image(None, "./test_image/Image_23.jpg"))

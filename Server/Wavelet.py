@@ -2,6 +2,7 @@ import numpy as np
 import pywt
 import cv2
 
+
 def waveletTrans(img, mode='haar', level=1):
     imArray = img
 
