@@ -20,7 +20,8 @@ function init() {
         
         var url = "http://127.0.0.1:5000/Classify_image"; // Use this if you are NOT using nginx.
         // var url="http://ec2-13-53-132-230.eu-north-1.compute.amazonaws.com:5000/Classify_image"; // Deploy on AWS EC2.
-   
+        // var url = "/api/Classify_image"; // Use this if you are using nginx.
+
         $.post(url, {
             image_data: imageData
         },function(data,status) {
@@ -102,6 +103,8 @@ function init() {
         dz.processQueue();		
     });
 }
+
+
 
 $(document).ready(function() {
     console.log( "ready!" );

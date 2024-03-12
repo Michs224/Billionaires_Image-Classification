@@ -52,13 +52,13 @@ def load_saved_artifacts():
     global __class_name_to_number
     global __class_number_to_name
 
-    with open(os.path.dirname(os.path.abspath(__file__))+"\Artifacts\Class_dictionary.json","r") as f:
+    with open(os.path.dirname(os.path.abspath(__file__))+"/Artifacts/Class_dictionary.json","r") as f:
         __class_name_to_number=json.load(f)
         __class_number_to_name={v:k for k,v in __class_name_to_number.items()}
 
     global __model
     if __model is None:
-        with open(os.path.dirname(os.path.abspath(__file__))+"\Artifacts\Saved_Model.pkl","rb") as f:
+        with open(os.path.dirname(os.path.abspath(__file__))+"/Artifacts/Saved_Model.pkl","rb") as f:
             __model=joblib.load(f)
     print("Loading saved artifacts...\nDone")
 
@@ -79,8 +79,8 @@ def get_cv2_image_from_base64_string(base64str):
 
 
 def get_cropped_image_if_2_eyes(image_path,image_base64_data):
-    face_cascade = cv2.CascadeClassifier(os.path.dirname(os.path.abspath(__file__))+"\opencv\haarcascades\haarcascade_frontalface_default.xml")
-    eye_cascade = cv2.CascadeClassifier(os.path.dirname(os.path.abspath(__file__))+"\opencv\haarcascades\haarcascade_eye.xml")
+    face_cascade = cv2.CascadeClassifier(os.path.dirname(os.path.abspath(__file__))+"/opencv/haarcascades/haarcascade_frontalface_default.xml")
+    eye_cascade = cv2.CascadeClassifier(os.path.dirname(os.path.abspath(__file__))+"/opencv/haarcascades/haarcascade_eye.xml")
 
     if image_path:
         img=cv2.imread(image_path)

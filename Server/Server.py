@@ -4,14 +4,10 @@ import Util
 app=Flask(__name__)
 
 @app.route("/Classify_image",methods=["POST"])
-
 def Classify_image():
-    image_data=request.form["image_data"]
-    response=jsonify(Util.classify_image(image_data))
-
-    response.headers.add("Access-Control-Allow-Origin","*")
-    # print(image_data)
-    
+    image_data = request.form["image_data"]
+    response = jsonify(Util.classify_image(image_data))
+    response.headers.add("Access-Control-Allow-Origin", "*")
     return response
 
 
