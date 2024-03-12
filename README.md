@@ -42,6 +42,6 @@
     6. Python flask for http server
     7. HTML/CSS/Javascript for UI
 
-##### Deployed on AWS EC2 : http://ec2-13-53-132-230.eu-north-1.compute.amazonaws.com:5000/
+##### Deployed on AWS EC2 : [http://ec2-13-53-132-230.eu-north-1.compute.amazonaws.com:5000/](http://ec2-13-60-38-205.eu-north-1.compute.amazonaws.com/)
 
 _**I deployed to AWS, but when I deployed, I used an aws free tier account which now the free tier duration will expire which was originally for 1 year. So, if the link is not working, then you can just run it on your localhost.I deployed to AWS, but when I deployed, I used an aws free tier account which now the free tier duration will expire which was originally for 1 year. So, if the link is not working, then you can just run it on your localhost.**_
