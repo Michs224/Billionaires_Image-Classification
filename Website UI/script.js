@@ -95,7 +95,7 @@ function init() {
                 }    
 
             }
-            // dz.removeFile(file);            
+            dz.removeFile(file);            
         });
     });
 

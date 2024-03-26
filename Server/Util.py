@@ -14,7 +14,7 @@ __model = None
 def classify_image(image_base64_data,file_path=None):
     images=get_cropped_image_if_2_eyes(file_path,image_base64_data)
 
-    # result=[]
+    result=[]
     
     for img in images:
         scalled_raw_img = cv2.resize(img, (48, 48))
@@ -32,16 +32,17 @@ def classify_image(image_base64_data,file_path=None):
         print(__model.predict(final))
         print(__model.predict(final)[0])
         '''
-        result=[{
-            "class":class_number_to_name(__model.predict(final)[0]),
-            "class_probability":np.round(__model.predict_proba(final)*100,2).tolist()[0],
-            "class_dictionary":__class_name_to_number
-        }]
-        # result.append({
+        # result=[{
         #     "class":class_number_to_name(__model.predict(final)[0]),
         #     "class_probability":np.round(__model.predict_proba(final)*100,2).tolist()[0],
         #     "class_dictionary":__class_name_to_number
-        # })
+        # }]
+        
+        result.append({
+            "class":class_number_to_name(__model.predict(final)[0]),
+            "class_probability":np.round(__model.predict_proba(final)*100,2).tolist()[0],
+            "class_dictionary":__class_name_to_number
+        })
 
         # print(result[0]["class"])
         # __model.predict_proba(final)
