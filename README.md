@@ -41,11 +41,7 @@
     5. Jupyter notebook, visual studio code and pycharm as IDE
     6. Python flask for http server
     7. HTML/CSS/Javascript for UI
-
-<<<<<<< HEAD
-##### Deployed on AWS EC2 : [http://ec2-13-53-132-230.eu-north-1.compute.amazonaws.com:5000/](http://ec2-13-60-38-205.eu-north-1.compute.amazonaws.com/) http://ec2-13-60-38-205.eu-north-1.compute.amazonaws.com/
-=======
+    
 ##### Deployed on AWS EC2 : [http://ec2-13-60-38-205.eu-north-1.compute.amazonaws.com/](http://ec2-13-60-38-205.eu-north-1.compute.amazonaws.com/)
->>>>>>> 146c9386ce04e5c0bf4327e99075f7201c5403ef
 
 _**I deployed to AWS, but when I deployed, I used an aws free tier account which now the free tier duration will expire which was originally for 1 year. So, if the link is not working, then you can just run it on your localhost.I deployed to AWS, but when I deployed, I used an aws free tier account which now the free tier duration will expire which was originally for 1 year. So, if the link is not working, then you can just run it on your localhost.**_
